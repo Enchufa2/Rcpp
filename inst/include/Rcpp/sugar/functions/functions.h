@@ -2,7 +2,8 @@
 //
 // functions.h: Rcpp R/C++ interface class library -- sugar functions
 //
-// Copyright (C) 2010 - 2013 Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2010 - 2020 Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2021  Dirk Eddelbuettel, Romain Francois and Iñaki Ucar
 //
 // This file is part of Rcpp.
 //
@@ -87,6 +88,8 @@
 #include <Rcpp/sugar/functions/rowSums.h>
 
 #include <Rcpp/sugar/functions/sample.h>
+
+#include <Rcpp/sugar/functions/do_call.h>
 
 #endif
 

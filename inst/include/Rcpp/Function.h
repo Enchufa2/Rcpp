@@ -2,7 +2,8 @@
 //
 // Function.h: Rcpp R/C++ interface class library -- functions (also primitives and builtins)
 //
-// Copyright (C) 2010 - 2013  Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2010 - 2020  Dirk Eddelbuettel and Romain Francois
+// Copyright (C) 2021  Dirk Eddelbuettel, Romain Francois and Iñaki Ucar
 //
 // This file is part of Rcpp.
 //
@@ -28,11 +29,19 @@
 
 namespace Rcpp{
 
+    namespace sugar{
+        template <bool NA, typename T, typename Function>
+        class DoCall;
+    }
+
     /**
      * functions
      */
     RCPP_API_CLASS(Function_Impl) {
     public:
+
+        template <bool NA, typename T, typename Function>
+        friend class sugar::DoCall;
 
         RCPP_GENERATE_CTOR_ASSIGN(Function_Impl)
 
